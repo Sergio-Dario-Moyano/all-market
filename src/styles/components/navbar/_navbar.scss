@@ -1,0 +1,80 @@
+@import '../../utils/_variables.scss';
+@import '../../layout/mediaQueries.scss';
+
+.navbar {
+  background-color: $color-black;
+  color: $color-white;
+  height: 5rem;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__bars {
+
+    &__icon {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__list {
+    padding: 0;
+    height: 100%;
+    display: none;
+  }
+
+  &__logo {
+    margin-left: 2.3rem;
+
+    &__text {
+      font-size: 1.4rem;
+      font-weight: 700;
+      text-align: center;
+      display: block;
+    }
+  }
+
+  &__social {
+
+    &__icon {
+      font-size: 1.5rem;
+      margin-left: 0.5rem;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+
+  .navbar {
+
+    &__bars {
+      display: none;
+    }
+
+    &__list {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      a {
+        display: block;
+        padding: 1.8rem 0;
+        color: $color-white;
+        border-bottom: 4px solid transparent;
+      }
+
+      a:hover {
+        border-bottom: 4px solid $color-orange;
+      }
+
+      &__item {
+        font-size: 0.8rem;
+        padding: 2rem 0;
+      }
+    }
+
+    &__logo {
+      margin-left: 0;
+    }
+  }
+}
